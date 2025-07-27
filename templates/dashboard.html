@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">📊 Dashboard</h1>
+
+<!-- Alerts -->
+<div class="alert alert-success" role="alert">
+  Ви успішно увійшли в систему!
+</div>
+
+<!-- Grid: Cards -->
+<div class="row">
+  <div class="col-md-4">
+    <div class="card text-white bg-primary mb-3">
+      <div class="card-header">Фракцій загалом</div>
+      <div class="card-body">
+        <h5 class="card-title">10</h5>
+        <p class="card-text">Кількість активних фракцій у базі.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-header">Дружні фракції</div>
+      <div class="card-body">
+        <h5 class="card-title">3</h5>
+        <p class="card-text">Фракції, які готові до співпраці.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-white bg-danger mb-3">
+      <div class="card-header">Ворожі фракції</div>
+      <div class="card-body">
+        <h5 class="card-title">3</h5>
+        <p class="card-text">Фракції, які становлять загрозу.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Table -->
+<h3 class="mt-5">📋 Останні дії</h3>
+<table class="table table-striped table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>#</th>
+      <th>Подія</th>
+      <th>Дата</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Оновлено дані фракції "Свобода"</td>
+      <td>2025-07-27</td>
+      <td><span class="badge bg-success">Успішно</span></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Додано нову фракцію "Синдикат"</td>
+      <td>2025-07-26</td>
+      <td><span class="badge bg-warning text-dark">Очікує</span></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Видалено фракцію "Ренегати"</td>
+      <td>2025-07-25</td>
+      <td><span class="badge bg-danger">Помилка</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Buttons and Icons -->
+<div class="mt-4">
+  <h4>🔧 Дії</h4>
+  <button class="btn btn-primary me-2"><i class="bi bi-plus-circle"></i> Додати фракцію</button>
+  <button class="btn btn-outline-secondary"><i class="bi bi-gear-fill"></i> Налаштування</button>
+</div>
+{% endblock %}

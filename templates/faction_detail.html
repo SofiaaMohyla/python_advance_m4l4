@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ faction.name }}{% endblock %}
+
+{% block content %}
+<h1>{{ faction.name }}</h1>
+<p><strong>Альянс:</strong> {{ faction.get_alignment_display }}</p>
+<p>{{ faction.description }}</p>
+<a href="{% url 'factions_list' %}" class="btn btn-secondary mt-3">← Назад</a>
+{% endblock %}

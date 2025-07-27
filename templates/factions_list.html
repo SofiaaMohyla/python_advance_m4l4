@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Фракції STALKER 2{% endblock %}
+
+{% block content %}
+<h1>Фракції</h1>
+<div class="row">
+    {% for faction in factions %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ faction.name }}</h5>
+                    <p class="card-text">{{ faction.description|truncatechars:120 }}</p>
+                    <a href="{% url 'faction_detail' faction.pk %}" class="btn btn-primary">Деталі</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
